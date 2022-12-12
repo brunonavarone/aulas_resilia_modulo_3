@@ -10,3 +10,5 @@ const promessa = new Promise((aceitar, rejeitar) => {
 })
 .then((aceitar) => console.log(`${aceitar} pois o sinal está ${semaforo}`))
 .catch((rejeitar) => console.log(`${rejeitar} pois o sinal está ${semaforo}`))
+
+const chalk = require("chalk");
