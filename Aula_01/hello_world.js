@@ -30,3 +30,16 @@ const promessa_Comunicacao = new Promise((aceitando, recusando) => {
 })
 .then((aceitando) => console.log(`Sucesso: ${aceitando}`))
 .catch((recusando) => console.log(`Falha: ${recusando}`))
+
+//const fetch = require("node-fetch");
+//import Nodefetch from "node-fetch"
+
+fetch("https://pokeapi.co/api/v2/pokemon")
+    .then((result) => {
+        console.log(result);
+        /*resultado_JSN = result.JSON.parse(result)
+        console.log(resultado_JSN)*/
+    })
+    .catch((erro) => {
+        console.log(erro);
+    })
