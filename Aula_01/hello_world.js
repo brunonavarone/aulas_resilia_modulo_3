@@ -9,17 +9,21 @@ const promessa = new Promise((aceitar, rejeitar) => {
 .then((aceitar) => console.log(`${aceitar} pois o sinal está ${semaforo}`))
 .catch((rejeitar) => console.log(`${rejeitar} pois o sinal está ${semaforo}`))*/
 
-const chalk = require("chalk");
+console.log("carregou");
+const Chalk = require("chalk");
 
-const msg_ola = chalk.blue("Olá ");
-const msg_mundo = chalk.white("mundo ");
-const msg_colorido = chalk.magenta("colorido!");
+//import Chalk from "chalk";
+//import Fetch from "node-fetch";
+
+const msg_ola = Chalk.blue("Olá ");
+const msg_mundo = Chalk.white("mundo ");
+const msg_colorido = Chalk.magenta("colorido!");
 
 console.log(msg_ola + msg_mundo + msg_colorido);
 
 const promessa_Comunicacao = new Promise((aceitando, recusando) => {
-    const random = Math.floor(Math.random() * (4 - 0) + 1);
-    //return random === 1 ? true : false;
+const random = Math.floor(Math.random() * (4 - 0) + 1);
+    
     console.log(`O número sorteado foi ${random}`)
     if(random <= 2.5){
         aceitando("Ok, todos vivos na estação");
@@ -31,15 +35,16 @@ const promessa_Comunicacao = new Promise((aceitando, recusando) => {
 .then((aceitando) => console.log(`Sucesso: ${aceitando}`))
 .catch((recusando) => console.log(`Falha: ${recusando}`))
 
-//const fetch = require("node-fetch");
+/*const Fetch = require("node-fetch");
 //import Nodefetch from "node-fetch"
 
-fetch("https://pokeapi.co/api/v2/pokemon")
+Fetch("https://pokeapi.co/api/v2/pokemon")
     .then((result) => {
         console.log(result);
         /*resultado_JSN = result.JSON.parse(result)
-        console.log(resultado_JSN)*/
+        console.log(resultado_JSN)
     })
     .catch((erro) => {
         console.log(erro);
-    })
+    })*/
+
